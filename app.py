@@ -1,7 +1,7 @@
 from phi.knowledge.langchain import LangChainKnowledgeBase
 from phi.agent import Agent, RunResponse
 import streamlit as st
-from langchain_openai import OpenAIEmbeddings
+from langchain.embeddings import OpenAIEmbeddings
 from phi.utils.pprint import pprint_run_response
 from phi.tools.python import PythonTools
 from phi.model.anthropic import Claude
