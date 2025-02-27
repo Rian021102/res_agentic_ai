@@ -104,6 +104,9 @@ st.set_page_config(page_title="Reservoir Engineering AI", page_icon=":earth_amer
 st.title("Reservoir Engineering AI")
 #set up the sidebar
 st.sidebar.title("Ask a question")
+st.sidebar.write("This A.I app simply to help you to answer the question related to reservoir engineering")
+st.sidebar.write("Hi, My name is Rian Rachmanto")
+st.sidebar.write("Let's connect : https://www.linkedin.com/in/rian-rachmanto/")
 #set an area for the user to input the question
 question = st.sidebar.text_area("Type your question here",
                                 height=100)
