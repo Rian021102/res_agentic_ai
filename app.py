@@ -1,14 +1,13 @@
 from phi.knowledge.langchain import LangChainKnowledgeBase
 from phi.agent import Agent, RunResponse
 import streamlit as st
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from phi.utils.pprint import pprint_run_response
 from phi.tools.python import PythonTools
 from phi.model.anthropic import Claude
 import os
 from langchain_community.vectorstores import DeepLake
-# from dotenv import load_dotenv
-# load_dotenv()
+
 
 
 openai_api_key = st.secrets["OPENAI_API_KEY"]
