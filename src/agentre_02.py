@@ -29,9 +29,6 @@ try:
 except Exception as e:
     raise Exception(f"Failed to initialize OpenAI embeddings: {str(e)}")
 
-# Authenticate with ActiveLoop
-os.environ['ACTIVELOOP_TOKEN'] = ACTIVELOOP_TOKEN
-
 # Global variable to store the database instance
 _db_instance = None
 
@@ -104,6 +101,6 @@ answering_agent = Agent(
 )
 
 
-response=answering_agent.run("What is the STOIP of oil reservoir with area of 200 acre, thickness of 50 feet, porosity of 0.1, water saturation of 0.3, and oil formation volume factor of 1.27 using the volumetric method?")
+response=answering_agent.run("What is permeability?")
 # response=answering_agent.run("What is the formula to calculate Bg?")
 pprint_run_response(response, markdown=True)
