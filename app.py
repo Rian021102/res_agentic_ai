@@ -46,7 +46,7 @@ knowledge_agent = Agent(
     name="RAG Agent",
     role="A reservoir engineer who is responsible to retrieve information from the knowledge base",
     instructions=" Answer the following question based only on the provided context.Your answers must be based on the document and please provide detailed answers. If you don't know the answer, just say you don't know. Don't try to make up an answer",
-    model=Claude(id="claude-3-7-sonnet-20250219", api_key=api_key),
+    model=Claude(id="claude-3-5-sonnet-20241022", api_key=api_key),
     knowledge=knowledge_base,
     add_context=True,
     search_knowledge=True,
@@ -59,7 +59,7 @@ formula_agent = Agent(
     name="Formula Agent",
     role='An expert in writing complex mathematical formula and re-arrenging the formula to answer the questions',
     instructions="Provide the formula from the  knowledge_agent. You need to re-arrenging the formula to answer the questions when needed",
-    model=Claude(id="claude-3-7-sonnet-20250219", api_key=api_key),
+    model=Claude(id="claude-3-5-sonnet-20241022", api_key=api_key),
     add_context=True,
     markdown=True,
 
@@ -70,7 +70,7 @@ latex_agent = Agent(
     name="Latex Agent", 
     role="An expert in re-writing formula asked in query from the formula_agent in Latex format", 
     instructions="Provide formula in Latex format",
-    model=Claude(id="claude-3-7-sonnet-20250219", api_key=api_key),
+    model=Claude(id="claude-3-5-sonnet-20241022", api_key=api_key),
     markdown=True,
 )
 
@@ -80,7 +80,7 @@ python_agent = Agent(
     description='An expert in writing python code to provide answers when there is numerical input related to formula',
     name="Python Agent",
     role="An python developer who exeperts in writing code in python to provide answers when there is query with numerical inputs",
-    model=Claude(id="claude-3-7-sonnet-20250219", api_key=api_key),
+    model=Claude(id="claude-3-5-sonnet-20241022", api_key=api_key),
     instructions="Provide the python agent from the mathematical formula agent to write the python code for the formula and use it to provide answers when query consists of numerical inputs",
     tools=[PythonTools()],
 )
